@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Nav } from "rsuite";
+
 import {
   Route,
   Routes,
@@ -17,10 +19,12 @@ class Main extends Component {
         <div>
           <h1>Golf Tracker</h1>
           <ul className="header">
+            <Nav>
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/dashboard">Dashboard</NavLink></li>
             <li><NavLink to="/groups">Groups</NavLink></li>
             <li><NavLink to="/profile">Profile</NavLink></li>
+            </Nav>
           </ul>
           <div className="content">
             <Routes>
@@ -30,6 +34,14 @@ class Main extends Component {
             <Route path="/profile" element={<Profile />}/>
             </Routes>
           </div>
+          <ul className="footer">
+          <Nav>
+            <li><NavLink exact to="/">Home</NavLink></li>
+            <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+            <li><NavLink to="/groups">Groups</NavLink></li>
+            <li><NavLink to="/profile">Profile</NavLink></li>
+            </Nav>
+          </ul>
         </div>
         </HashRouter>
     );
